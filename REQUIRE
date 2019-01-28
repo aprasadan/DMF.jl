@@ -1,0 +1,8 @@
+julia 0.7 
+LinearAlgebra
+DSP
+Statistics
+QuantEcon
+StatsBase
+RCall
+

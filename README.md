@@ -1,12 +1,12 @@
 # DMF.jl
 
-DMF.jl is a [julia](https://julialang.org/) package providing the Dynamic Mode Factorization algorithm, which is an extension of the Dynamic Mode Decomposition algorithm. This algorithm can be used to perform Blind Source Separation. 
+DMF.jl is a [julia](https://julialang.org/) package providing the Dynamic Mode Factorization algorithm, which is an extension of the Dynamic Mode Decomposition algorithm. This algorithm can be used to perform Blind Source Separation. Details about this algorithm are forthcoming. 
 
 ## Installation
 
 The package has not been registered in `METADATA.jl` and can be installed with `Pkg.clone`.
 ```julia
-julia> Pkg.clone("DMF.jl.git")
+julia> using Pkg; Pkg.add("https://github.com/aprasadan/DMF.jl")
 ```
 
 ## Example
@@ -31,7 +31,7 @@ w, Q_hat, C_hat, A_hat = dmf(X; C_nsv = k, lag = 1)
 
 @show eigenvector_error(Q, Q_hat[:, 1:k]) # Should be small
 @show eigenvector_error(S, C_hat) # Should be small
-@show [cos(2.0), 0.6], w # Should be close
+@show [cos(2.0), 0.6], w[1:k] # Should be close
 ```
 
 ## License
@@ -41,6 +41,8 @@ This package is provided as is under the MIT License.
 ## Author
 
 Arvind Prasadan
+
 prasadan@umich.edu
+
 University of Michigan, Department of EECS
 
