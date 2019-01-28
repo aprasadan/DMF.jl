@@ -89,7 +89,7 @@ Q_hat = [Q[:, 2] Q[:, 1] randn(p)]
 
 # For Source Separation Tests
 
-p = 10
+p = 100
 k = 2
 n = 1000
 Q = qr(randn(p, k)).Q
@@ -100,9 +100,9 @@ D = Diagonal(1:k)
 X = Q * D * S'
 
 # SOBI_Wrapper
-tol = 1e-3
-U, s, V = svd(X, full = false)
-S_hat = SOBI_Wrapper(U[:, 1:k]' * X, 1)[2]
+tol = 1e-2
+Q_hat, S_hat = SOBI_Wrapper(X, 1)
+@test isapprox(eigenvector_error(Q, Q_hat), 0.0; atol = tol)
 @test isapprox(eigenvector_error(S, S_hat), 0.0; atol = tol)
 
 # DMF: Standard
