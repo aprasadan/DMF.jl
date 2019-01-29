@@ -34,9 +34,13 @@ w, Q_hat, C_hat, A_hat = dmf(X; C_nsv = k, lag = 1)
 @show [cos(2.0), 0.6], w[1:k] # Should be close
 ```
 
+## Requirements
+
+This package requires Julia 1.0. Additionally, it requires the LinearAlgebra, DSP, Statistics, StatsBase, QuantEcon, and RCall packages. QuantEcon is needed to simulate ARMA processes, and RCall is needed to run the SOBI Blind Source Separation algorithm. The R install needs the jointDiag package. Neither RCall nor QuantEcon are fundamentally required to use the DMF functionality. 
+
 ## License
 
-This package is provided as is under the MIT License. 
+This package is provided as is under the Apache 2.0 License. 
 
 ## Author
 
