@@ -4,7 +4,7 @@
 # Generates a realization of an cosine sequence
 
 """
-	gen_cos_sequence(n = 100, f = 1.0, fs = 1.0)
+	gen_cos_sequence(n = 100, f = 1.0, fs = 1.0, phase = 0.0)
 
 Generates a realization of an cosine sequence
 
