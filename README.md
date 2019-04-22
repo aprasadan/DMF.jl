@@ -4,9 +4,9 @@ DMF.jl is a [julia](https://julialang.org/) package providing the Dynamic Mode F
 
 ## Installation
 
-The package has not been registered in `METADATA.jl` and can be installed with `Pkg.clone`.
+The package has not been registered in `METADATA.jl` and can be installed with:
 ```julia
-julia> using Pkg; Pkg.clone("https://github.com/aprasadan/DMF.jl")
+(v1.0) pkg> add https://github.com/aprasadan/DMF.jl
 ```
 
 ## Example
