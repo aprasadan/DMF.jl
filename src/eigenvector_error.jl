@@ -17,6 +17,15 @@ Finds the squared error
 - Error
 """
 function eigenvector_error(Q, Q_hat)
+	@assert(size(Q, 1) == size(Q_hat, 1), "Q and Q_hat have different dimensions")
+	@assert(size(Q, 2) == size(Q_hat, 2), "Q and Q_hat have different dimensions")
+
+	return 2.0 * sum(1.0 .- abs.(permute_IP(Q, Q_hat)))
+end
+
+# Old function
+"""
+function eigenvector_error(Q, Q_hat)
 
     if size(Q, 1) != size(Q_hat, 1)
        return Inf
@@ -28,4 +37,5 @@ function eigenvector_error(Q, Q_hat)
     
     return abs(2.0 * (k - norm(mapslices(maximum, abs.(Q_hat' * Q); dims = 1), 2)^2.0))
 end
+"""
 

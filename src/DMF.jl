@@ -17,6 +17,7 @@ using DSP
 using Statistics
 using QuantEcon
 using StatsBase
+using Combinatorics
 # SOBI Via R
 using RCall
 
@@ -24,6 +25,7 @@ using RCall
 export 	dmf, # Main Algorithm
 	optshrink, # Denoising
 	SOBI_Wrapper, # Wrapper for SOBI method
+	permute_IP, # Best inner product
 	eigenvector_error, # Loss function
 	autocorrelation, # Autocorrelation function
 	autocorr_mat, # Autocorrelation matrix
@@ -34,6 +36,7 @@ export 	dmf, # Main Algorithm
 include("dmf_function.jl")
 include("optshrink.jl")
 include("SOBI_Wrapper.jl")
+include("permute_IP.jl")
 include("eigenvector_error.jl")
 include("autocorrelation.jl")
 include("autocorr_mat.jl")
