@@ -12,7 +12,7 @@
 # Outputs
 - Vector of 'best' inner products
 """
-function permute_IP(Q::Matrix, Q_hat::Matrix)
+function permute_IP(Q, Q_hat)
     k = size(Q, 2)
     
     @assert(k == size(Q_hat, 2), "Q and Q_hat have differing numbers of vectors")
