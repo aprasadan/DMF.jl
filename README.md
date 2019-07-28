@@ -37,7 +37,7 @@ w, Q_hat, C_hat, A_hat = dmf(X; C_nsv = k, lag = 1)
 
 ## Requirements
 
-This package requires Julia 1.0. Additionally, it requires the LinearAlgebra, DSP, Statistics, and StatsBase packages. The Combinatorics package is used in the error computation function, QuantEcon is needed to simulate ARMA processes, and RCall is needed to run the SOBI Blind Source Separation algorithm (included only for comparisons). The R install needs the jointDiag package. None of Combinatorics, RCall, and QuantEcon are fundamentally required to use the DMF functionality. 
+This package requires Julia 1.0. Additionally, it requires the LinearAlgebra, DSP, Statistics, and StatsBase packages. The Combinatorics package is used in the error computation function and QuantEcon is needed to simulate ARMA processes. Neither Combinatorics nor QuantEcon are fundamentally required to use the DMF functionality. 
 
 ## License
 

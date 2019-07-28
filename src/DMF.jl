@@ -18,24 +18,25 @@ using Statistics
 using QuantEcon
 using StatsBase
 using Combinatorics
-# SOBI Via R
-using RCall
+# SOBI Via R: Dropped
+# using RCall
 
 # Functions to export (all)
 export 	dmf, # Main Algorithm
 	optshrink, # Denoising
-	SOBI_Wrapper, # Wrapper for SOBI method
 	permute_IP, # Best inner product
 	eigenvector_error, # Loss function
 	autocorrelation, # Autocorrelation function
 	autocorr_mat, # Autocorrelation matrix
 	gen_arma_sequence, # Generate a realization of an ARMA process
 	gen_cos_sequence # Generate a cosine sequence
+	# SOBI_Wrapper, # Wrapper for SOBI method
+
 
 # Code files
 include("dmf_function.jl")
 include("optshrink.jl")
-include("SOBI_Wrapper.jl")
+# include("SOBI_Wrapper.jl")
 include("permute_IP.jl")
 include("eigenvector_error.jl")
 include("autocorrelation.jl")

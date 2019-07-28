@@ -345,12 +345,6 @@ git-tree-sha1 = "63f16ae8a4c67adc6fe30b0aaf654686e174f25a"
 uuid = "fcd29c91-0bd7-5a09-975d-7ac3f643a60c"
 version = "0.16.1"
 
-[[RCall]]
-deps = ["CategoricalArrays", "Conda", "DataFrames", "DataStructures", "Dates", "Libdl", "Missings", "REPL", "Random", "Requires", "StatsModels", "WinReg"]
-git-tree-sha1 = "828332205a09377da6a8ebd1e615b11a22f8def6"
-uuid = "6f49c342-dc21-5d91-9882-a32aef131414"
-version = "0.13.3"
-
 [[REPL]]
 deps = ["InteractiveUtils", "Markdown", "Sockets"]
 uuid = "3fa0cd96-eef1-5676-8a61-b3b8758bbffb"
